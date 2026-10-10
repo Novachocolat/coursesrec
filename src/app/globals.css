@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfaf8;
+  --foreground: #1f1d1a;
+  --muted: #6f6a62;
+  --line: #e7e3dc;
+  --card: #ffffff;
+  --accent: #c2410c;
+  --accent-soft: #fdf0e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #151413;
+    --foreground: #ece8e1;
+    --muted: #a39d92;
+    --line: #2d2a27;
+    --card: #1c1b19;
+    --accent: #fb923c;
+    --accent-soft: #2a1d14;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.notes-prose { font-family: var(--font-serif), Georgia, serif; font-size: 16px; line-height: 1.75; }
+.notes-prose h1, .notes-prose h2, .notes-prose h3 { font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; margin: 1.6em 0 0.5em; }
+.notes-prose h1 { font-size: 1.5em; }
+.notes-prose h2 { font-size: 1.25em; }
+.notes-prose h3 { font-size: 1.1em; }
+.notes-prose :first-child { margin-top: 0; }
+.notes-prose p { margin: 0.8em 0; }
+.notes-prose ul, .notes-prose ol { margin: 0.8em 0; padding-left: 1.4em; }
+.notes-prose ul { list-style: disc; }
+.notes-prose ol { list-style: decimal; }
+.notes-prose li { margin: 0.25em 0; }
+.notes-prose blockquote { border-left: 3px solid var(--line); padding-left: 1em; color: var(--muted); }
+.notes-prose code { font-family: var(--font-geist-mono), monospace; font-size: 0.9em; background: var(--accent-soft); padding: 0.1em 0.35em; border-radius: 4px; }
+.notes-prose table { border-collapse: collapse; margin: 1em 0; font-size: 0.95em; }
+.notes-prose th, .notes-prose td { border: 1px solid var(--line); padding: 0.4em 0.7em; text-align: left; }
